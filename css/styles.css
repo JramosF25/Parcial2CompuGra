@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+ .background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 85%;
+  }
+
+.circle{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #c0ab87;
+    border:1px solid #792d05;
+    opacity: 100%;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 10px;
+    
+}
+
+.circle .brand{
+    opacity: 100%;
+}
+
+/*MAIN*/
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-info{
+    margin-top: 4.2em;
+    color: #c0ab87;
+}
+
+h1{
+    color: #c0ab87;
+    font-size: 150px;
+    justify-content: center;
+}
+
+h3{
+    font-size: 30px;
+    color: #792d05 ;
+    justify-content: center;
+    margin-left: 4em;
+}
+
+button{
+    cursor: pointer;
+    color: #792d05;
+}
+
+.developers{
+    display: flex;
+    justify-content:center;
+    margin-top:5em;
+    color: #c0ab87;
+    opacity: 50%;
+}
+
+.developers:hover{
+    background-color: #0e1d27;
+    transition: all .5s;
+    border-radius: 5px;
+}
+
+
+.btn-models{
+    background-color: #c0ab87;
+    padding: 8px 30px;
+    font-size: 1.6em;
+    border-radius: 10px;
+    border: none;
+    position:relative;
+    top:50%; 
+    left:30%;
+}
+
+.btn-models:hover{
+    background-color: #0e1d27;
+    transition: 1s;
+    font-size: 2em;
+}
+
+/*Colores marca 
+#c0ab87  Beige
+#0e1d27  Azul
+#792d05  Rojo*/
+
+/*Configuración botones Car Models*/
+
+body #contentModels {
+    display: none;
+    position: fixed;
+    background: transparent;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    z-index: 2;
+    width: 20vw;
+    height: 100vh;
+  }
+  
+  body #contentModels .btnOptionModels {
+    border: 10px solid #0e1d27;
+    width: 15vw;
+    height: 20vh;
+    margin: 2vw;
+    border-radius: 15px;
+    padding: 15px;
+    color: #792d05;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  body #contentModels .btnOptionModels:hover {
+    width: 20vw;
+  }
+  
+  body #contentTexture {
+    display: none;
+    position: fixed;
+    background: #ffffff00;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    z-index: 2;
+    width: 80vw;
+    height: 10vh;
+  }
+  
+  body #contentTexture .btnOptionTexture {
+    border: 10px solid #0e1d27;
+    width: 15vw;
+    height: 8vh;
+    margin: 2vw;
+    border-radius: 15px;
+    padding: 15px;
+    color: #792d05;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  body #contentTexture .btnOptionTexture:hover {
+    width: 20vw;
+  }
+  
+  .custom1 {
+    background-image: url(https://image.freepik.com/vector-gratis/curvas-nivel-topograficas-mapa-patrones-fisuras_1284-52862.jpg);
+  }
+  .custom2 {
+    background-image: url(https://image.freepik.com/vector-gratis/fondo-rayas-grunge-diagonal-verde_1409-1421.jpg);
+  }
+  .custom3 {
+    background-image: url(https://image.freepik.com/vector-gratis/fondo-azul-modelo-grunge_1409-1359.jpg);
+  }
+
+

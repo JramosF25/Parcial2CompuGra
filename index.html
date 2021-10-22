@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche-Showroom</title>
+    <link rel="stylesheet" href="/js/scripts.js">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="Keywords" content="Porsche,car,3D">
+    <meta name="description" content="Porsche 3D showroom proyect">
+    <meta name="author" content="Juan Jose Ramos F & Juan Jose Muñoz"> 
+</head>
+<body>
+    <div id="content">
+    <div class="hero" id="home">
+        <header>
+          <div class="circle">
+            <img class="brand" src="./img/porsche-logo-0.png" alt="PorscheLogo">
+          </div>
+        </header>
+        <main class="main">
+            <div class="content-info">
+              <br>
+                <h1>Porsche</h1>
+                <br>
+                <h3>''There is no substitute''</h3>
+                <br><br><br><br><br>
+                <div class="button-content">
+                    <button class="btn-models">Car Models</button>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <div class="developers">
+                  <h2>Developers: Juan Jose Ramos F & Juan Jose Muñoz</h2>
+                </div>
+            </div>
+            <div>
+            <video class="background-video" autoplay loop muted>
+                <source src="./img/porscheVideo.mp4" type="video/mp4">
+            </video>
+            </div>
+        </main>
+    </div>
+</div>
+<script type="module">
+    import{main,changeModel,changeTexture}from'/js/scripts.js';
+    const recuplist=document.querySelectorAll('.btn-models');
+    const btnOptionModels = document.querySelectorAll('.btnOptionModels');
+    const btnOptionTexture = document.querySelectorAll('.btnOptionTexture');
+    let size ;
+    let size2 ="modelOne";
+    let size3;
+    let size4 ;
+  
+    recuplist.forEach(optionSelected=>{ 
+        optionSelected.onclick=function(){
+        mostrar();
+        size= 40;
+        tooglecontent();
+        main(size);
+
+        }
+    });
+   
+    btnOptionModels.forEach(optionSelected=>{ 
+        optionSelected.onclick=function(){
+          var optionModel = this.dataset.size;
+      size2=optionModel;
+      changeModel(size2);
+
+        }
+    });
+
+    btnOptionTexture.forEach(optionSelected=>{ 
+        optionSelected.onclick=function(){
+          var optionModel2 = this.dataset.size;
+      size3=optionModel2;
+      console.log(size2);
+      changeTexture(size2,size3);
+
+        }
+    });
+
+  
+    function mostrar(){
+    
+    var elemento = document.getElementById('contentModels');
+    elemento.style.display = "flex";
+
+    var elemento = document.getElementById('contentTexture');
+    elemento.style.display = "flex";
+    
+}
+
+    function tooglecontent(){
+        content.style.display=content.style.display=='none'?'flex':'none';
+    }
+
+
+</script> 
+<div id="contentModels">
+    <div class="btnOptionModels custom modelOne" data-size="modelOne">
+      <div class="title"><img src="./img/PS911.png" width="190" height="100" alt="Porsche911"></div>
+    </div>
+    <div class="btnOptionModels custom modelTwo" data-size="modelTwo">
+      <div class="title"><img src="./img/GT3RS.png" width="190" height="100" alt="PorscheGT3"></div>
+    </div>
+    <div class="btnOptionModels custom modelThree" data-size="modelThree">
+      <div class="title"><img src="./img/Cayane.png" width="190" height="100" alt="PorscheCayane"></div>
+    </div>
+    <div class="btnOptionModels custom modelFour " data-size="modelFour">
+      <div class="title"><img src="./img/918SP.png" width="190" height="100" alt="Porsche918SP"></div>
+    </div>
+  </div>
+  <div id="contentTexture">
+    <div class="btnOptionTexture custom1" data-size="1">
+      <div class="title"></div>
+    </div>
+    <div class="btnOptionTexture custom2" data-size="2">
+      <div class="title"></div>
+    </div>
+    <div class="btnOptionTexture custom3" data-size="3">
+      <div class="title"></div>
+    </div>
+  </div>
+</body>
+</html>
